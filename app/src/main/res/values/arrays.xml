@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="location">
+        <item>혜화동</item>
+        <item>위치 추가하기</item>
+    </string-array>
+</resources>

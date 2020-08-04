@@ -5,19 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".LocationSearchActivity">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="16dp"
-        android:orientation="vertical">
-    <EditText
-        android:id="@+id/LSEt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="text"
-        android:maxEms="30"
-        android:hint="내 동네 이름(동,읍,면)으로 검색"/>
 
     <Button
         android:id="@+id/LSBtn"
@@ -28,30 +17,28 @@
         android:textSize="16sp"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
+        android:onClick="Lsclick"
         android:background="@drawable/round"/>
-    </LinearLayout>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:layout_marginTop="8dp"
             android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="근처동네"
-        android:layout_margin="16dp"
-        android:textSize="16dp"/>
+            <WebView
+                android:id="@+id/daum_webview"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"/>
 
-        <ListView
-            android:id="@+id/LSList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            <TextView
+                android:id="@+id/daum_result"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:text="Result" />
+
         </LinearLayout>
-    </ScrollView>
+
 
 </LinearLayout>
