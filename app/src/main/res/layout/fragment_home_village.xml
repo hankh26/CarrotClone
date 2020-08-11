@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="152dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleimg"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:src="@drawable/littledeep_rabbit_style1"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="16dp"/>
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xx님, 오늘 혜화동 이야기를\n들려주세요!"
+            android:textSize="16sp"
+            android:textColor="#FF000000"
+            android:textStyle="normal"
+            android:layout_toRightOf="@id/circleimg"
+            android:layout_marginTop="32dp"
+            android:layout_marginLeft="16dp" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_marginTop="12dp"
+            android:layout_below="@id/circleimg"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"/>
+
+        <Button
+            android:id="@+id/write"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="동네생활 글쓰기"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FF9800"
+            android:layout_below="@id/view"
+            android:background="#FFFFFFFF"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#CCCCCC"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/villageRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

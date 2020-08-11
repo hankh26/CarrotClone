@@ -18,8 +18,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".LocationSearchActivity"
-            android:theme="@style/AppTheme.IntroActivity"></activity>
+        <activity android:name=".AddLocationActivity"></activity>
+        <activity android:name=".NotifyActivity" />
+        <activity android:name=".OptionActivity" />
+        <activity android:name=".SearchActivity" />
+        <activity
+            android:name=".LocationSearchActivity"
+            android:theme="@style/AppTheme.IntroActivity" />
         <activity
             android:name=".IntroActivity"
             android:theme="@style/AppTheme.IntroActivity">
@@ -32,7 +37,7 @@
         <activity
             android:name=".LocationActivity"
             android:theme="@style/AppTheme.IntroActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>

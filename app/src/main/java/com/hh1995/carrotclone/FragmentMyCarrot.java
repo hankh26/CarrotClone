@@ -13,7 +13,7 @@ public class FragmentMyCarrot extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_write,container,false);
+        View view=inflater.inflate(R.layout.fragment_mycarrot,container,false);
 
         return view;
     }

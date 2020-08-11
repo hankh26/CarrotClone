@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/productImg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/round"/>
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="물건이름"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/productImg"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/productLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="위치"
+        android:textSize="16sp"
+        android:textColor="#B9323232"
+        android:layout_toRightOf="@id/productImg"
+        android:layout_below="@id/productName"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="16dp"/>
+
+    <TextView
+        android:id="@+id/productPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가격"
+        android:textSize="16sp"
+        android:textColor="#FF000000"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/productImg"
+        android:layout_below="@id/productLocation"
+        android:layout_marginTop="6dp"
+        android:layout_marginLeft="16dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#B9323232"
+        android:layout_below="@id/productImg"
+        android:layout_marginTop="16dp"/>
+
+
+</RelativeLayout>

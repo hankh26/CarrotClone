@@ -5,14 +5,56 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"/>
+        android:layout_height="?attr/actionBarSize">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="글쓰기"
+            android:textSize="24sp"
+            android:textColor="#FF000000"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.5dp"
-        android:background="#E3E3E3"/>
-    <androidx.recyclerview.widget.RecyclerView
+        android:layout_height="1dp"
+        android:background="#9A9A9A"/>
 
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:padding="16dp">
+    <ImageView
+        android:id="@+id/writeImg"
+        android:layout_width="240dp"
+        android:layout_height="200dp"
+        android:src="@drawable/round"/>
+        <Button
+            android:id="@+id/imgloadBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/writeImg"
+            android:layout_alignBottom="@id/writeImg"
+            android:background="@drawable/round"
+            android:text="사진 가져오기"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:padding="8dp"
+            android:layout_marginLeft="8dp"/>
+
+        <EditText
+            android:id="@+id/writePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/imgloadBtn"
+            android:hint="가격"
+            android:maxEms="20"
+            android:padding="16dp"
+            android:background="@drawable/roundcategory"/>
+
+    </RelativeLayout>
+
+
+
 
 </LinearLayout>
