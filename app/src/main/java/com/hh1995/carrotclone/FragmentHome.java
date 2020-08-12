@@ -18,9 +18,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.ArrayList;
 
 public class FragmentHome extends Fragment {
 
@@ -69,6 +72,8 @@ public class FragmentHome extends Fragment {
 
         tabLayout=view.findViewById(R.id.tabLayout);
         tabLayout.setupWithViewPager(viewPager);
+
+
 
         return view;
     }

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/vilCirImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@drawable/round"/>
+
+    <TextView
+        android:id="@+id/vilNick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="닉네임"
+        android:textColor="#FF000000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_toRightOf="@id/vilCirImg"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="6dp"/>
+
+    <TextView
+        android:id="@+id/q"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Q."
+        android:textStyle="bold"
+        android:fontFamily="@font/aaa"
+        android:layout_below="@id/vilCirImg"
+        android:layout_marginTop="4dp"
+        android:textColor="#FF9800"
+        android:textSize="32dp"/>
+
+    <TextView
+        android:id="@+id/question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="질문"
+        android:textColor="#FF000000"
+        android:textSize="18sp"
+        android:layout_toRightOf="@id/q"
+        android:layout_marginBottom="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_alignBottom="@id/q"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="#B9DCDBDB"
+        android:layout_below="@id/question"/>
+</LinearLayout>

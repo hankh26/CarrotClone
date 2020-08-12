@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -14,18 +17,20 @@
             android:textColor="#FF000000"
             android:textStyle="bold"/>
     </androidx.appcompat.widget.Toolbar>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:background="#9A9A9A"/>
 
     <RelativeLayout
+        android:id="@+id/rl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp">
     <ImageView
         android:id="@+id/writeImg"
-        android:layout_width="240dp"
+        android:layout_width="260dp"
         android:layout_height="200dp"
         android:src="@drawable/round"/>
         <Button
@@ -42,19 +47,75 @@
             android:padding="8dp"
             android:layout_marginLeft="8dp"/>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/writeImg"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/writeName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgloadBtn"
+                android:layout_marginTop="16dp"
+                android:hint="물건이름"
+                android:maxEms="20"
+                android:inputType="number"
+                android:padding="8dp"
+                android:background="@drawable/roundcategory"/>
+
         <EditText
             android:id="@+id/writePrice"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/imgloadBtn"
+            android:layout_marginTop="16dp"
             android:hint="가격"
             android:maxEms="20"
-            android:padding="16dp"
+            android:inputType="number"
+            android:padding="8dp"
             android:background="@drawable/roundcategory"/>
 
+        <EditText
+            android:id="@+id/writeLoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/writePrice"
+            android:background="@drawable/roundcategory"
+            android:padding="8dp"
+            android:inputType="text"
+            android:maxEms="20"
+            android:layout_marginTop="8dp"
+            android:hint="예상 장소 지정"/>
+
+        <EditText
+            android:id="@+id/writeInfo"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:hint="설명"
+            android:gravity="top"
+            android:inputType="textMultiLine"
+            android:background="@drawable/roundcategory"
+            android:layout_marginTop="8dp"
+            android:padding="8dp"
+            android:layout_below="@id/writeLoc"/>
+
+
+        <Button
+            android:id="@+id/uploadBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/writeInfo"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/round"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#FFFFFF"
+            android:text="상품 올리기"/>
+        </LinearLayout>
     </RelativeLayout>
-
-
 
 
 </LinearLayout>
