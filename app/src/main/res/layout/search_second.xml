@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:background="#e3e3e3"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="추천 검색어"
+        android:text="인기 검색어"
         android:textSize="24dp"
         android:textColor="#FF000000"/>
 
@@ -52,4 +60,74 @@
             android:layout_marginRight="4dp"
             android:background="@drawable/roundcategory"/>
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="인테리어"
+            android:textSize="14sp"
+            android:textColor="#FF000000"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/roundcategory"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="네일"
+            android:textSize="14sp"
+            android:textColor="#FF000000"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/roundcategory"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="이사"
+            android:textSize="14sp"
+            android:textColor="#FF000000"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/roundcategory"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="컴퓨터"
+            android:textSize="14sp"
+            android:textColor="#FF000000"
+            android:layout_marginRight="4dp"
+            android:background="@drawable/roundcategory"/>
+    </LinearLayout>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="12dp"
+        android:background="#e3e3e3"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        >
+        <TextView
+            android:id="@+id/fav_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="혜화동 근처 인기 매물"
+            android:layout_margin="16dp"
+            android:textSize="24dp"
+            android:textColor="#FF000000"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/searchSecondRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:layout_below="@id/fav_tv"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+/>
+    </RelativeLayout>
+
 </LinearLayout>
