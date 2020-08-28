@@ -23,8 +23,10 @@ public class HomeFragmentSecondhand extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view= inflater.inflate(R.layout.fragment_home_secondhand,container,false);
         writeItems.clear();
-        writeItems.add(new WriteItem(R.drawable.carrot,"핸드폰","혜화동","1000원","오래된거"));
-        writeItems.add(new WriteItem(R.drawable.carrot,"핸드폰","혜화동","1000원","오래된거"));
+        writeItems.add(new WriteItem(R.drawable.hp,"핸드폰","혜화동","100000원","오래된거"));
+        writeItems.add(new WriteItem(R.drawable.com,"컴퓨터","이화동","1000000원","최신"));
+        writeItems.add(new WriteItem(R.drawable.note,"노트북","명륜동","500000원","1년정도사용"));
+        writeItems.add(new WriteItem(R.drawable.book,"공책","부암동","1000원","새거"));
         recyclerView=view.findViewById(R.id.secondRecycler);
         writeAdapter=new WriteAdapter(getContext(),writeItems);
         recyclerView.setAdapter(writeAdapter);

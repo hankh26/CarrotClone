@@ -44,6 +44,7 @@ public class WriteAdapter extends RecyclerView.Adapter {
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         VH vh=(VH)holder;
         WriteItem writeItem=writeItems.get(position);
+        Glide.with(context).load(writeItem.file).into(vh.proimg);
         vh.proName.setText(writeItem.name);
         vh.proPrice.setText(writeItem.price);
         vh.proMeet.setText(writeItem.meet);

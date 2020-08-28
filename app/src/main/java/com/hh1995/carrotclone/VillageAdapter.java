@@ -9,6 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -41,6 +43,7 @@ public class VillageAdapter extends RecyclerView.Adapter {
         VillageItem villageItem=villageItems.get(position);
         vh.nick.setText(villageItem.nick);
         vh.question.setText(villageItem.question);
+        Glide.with(context).load(villageItem.img).into(vh.cirImg);
 
     }
 
